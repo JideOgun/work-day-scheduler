@@ -25,10 +25,13 @@ const m = moment().format('LLL');
 
 
  function createCol(){
+     let collection = []
      for( var i = 0; i < 3; i++){
-    let col = $('<div>').addClass(`col-`, 'p-0');
-    return col; }
-    
+    let col = $('<div>').addClass(`col-${i + 1}`, 'p-0');
+    collection.push(col)
+    col.textContent = "dfghjk"
+ }
+ return collection;
 }
 
 

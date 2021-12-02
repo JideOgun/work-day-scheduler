@@ -93,3 +93,16 @@ textarea{
 /* #timeblock-9 {
   border: solid 2pt rgb(7, 63, 21);
 } */
+
+.col-1 {
+  border: solid 3pt rgb(6, 12, 51);
+}
+
+.col-2 {
+  border: solid 3pt rgb(35, 131, 51);
+}
+
+.col-3 {
+  border: solid 3pt rgb(219, 170, 8);
+  width: 100%;
+}
