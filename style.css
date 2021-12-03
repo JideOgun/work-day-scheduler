@@ -11,6 +11,8 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .jumbotron {
@@ -74,9 +76,6 @@ textarea{
   border: solid 6pt black;
 }
 
-.row {
-  border: solid 3pt rgb(219, 8, 8);
-}
 
 #textarea-div {
   border: solid 2pt rgb(8, 1, 107);
@@ -105,4 +104,17 @@ textarea{
 .col-3 {
   border: solid 3pt rgb(219, 170, 8);
   width: 100%;
+}
+
+.col-10 {
+  border: solid 3pt rgb(81, 131, 35);
+  width: 100%;
+  height: 100%;
+}
+
+.text-area {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  
 }
