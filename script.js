@@ -6,32 +6,22 @@ const time = moment().format('LLL');
  let currentHour = parseInt(moment().format('H'));
  console.log(currentHour);
  
-//   var timediv = $(this).text();
-// console.log(timediv);
-//  //grab each hour 
-//  $(".hour").each(function(){ })
    
-  
+  // looping from 9 to 17 and checking at each i if the time is greater or less than the current time value in format H, and changing the background color by adding classes
    for(var i = 9; i < 18; i++) {
        var timediv = document.getElementById('hour-' + i);
-    //    console.log(timediv)
+  
        if(currentHour > i ){
-    console.log('it worked and current time is greater than timeblock time');
     $('.timeblock').removeClass('future');
      $(`#hour-${i}`).addClass('past');
  }
      else if (currentHour < i){
         $(`#hour-${i}`).addClass('future');
-        console.log('it worked and current time is less than timeblock time');
 }
     else {
         $(`#hour-${i}`).addClass('present');
- console.log('it worked and current time is equal to timeblock time')
    }
    } 
-    
-
-
 
   // store items to local storage
 $('.saveBtn').click(function() {
@@ -58,6 +48,8 @@ localStorage.setItem('description16', value16);
 localStorage.setItem('description17', value17);
 })
 
+
+// get items from local storage
 $("#ta9").val(localStorage.getItem('description9'));
 $("#ta10").val(localStorage.getItem('description10'))
 $("#ta11").val(localStorage.getItem('description11'))
