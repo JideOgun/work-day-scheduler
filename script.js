@@ -3,28 +3,31 @@ const time = moment().format('LLL');
 
 // Add the current date to the screen
  currentDayEl.textContent = time;
- let currentHour = moment().format('LT');
+ let currentHour = parseInt(moment().format('H'));
  console.log(currentHour);
  
-
-
- //grab each hour 
- $(".hour").each(function(){
-     var timediv = $(this).text();
-     let timediv1 = moment(timediv)
-     console.log(timediv1);
-    
-    if(currentHour > timediv1 ){
+//   var timediv = $(this).text();
+// console.log(timediv);
+//  //grab each hour 
+//  $(".hour").each(function(){ })
+   
+     
+   for(var i = 9; i < 18; i++) {
+       var timediv = document.getElementById('hour-' + i);
+       console.log(timediv)
+       if(currentHour > i ){
     console.log('it worked and current time is greater than timeblock time');
      $('.timeblock').addClass('past')
  }
-     else if (currentHour === timediv1){
+     else if (currentHour === i){
  $('.timeblock').addClass('present');
  console.log('it worked and current time is equal to timeblock time');
 }
-    else if (currentHour < timediv1){
+    else if (currentHour < i){
     $('.timeblock').addClass('future');
     console.log('it worked and current time is less than timeblock time');
                 }
- })
+   } 
+    
+
  
