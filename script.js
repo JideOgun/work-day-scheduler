@@ -69,7 +69,15 @@ $("#ta16").val(localStorage.getItem('description16'))
 $("#ta17").val(localStorage.getItem('description17'))
 
 $('.clearfields').click(function(){
-    $('#ta9').val() = '';
+    $('#ta9').remove();
+    $("#ta10").remove();
+    $("#ta11").remove();
+    $("#ta12").remove();
+    $("#ta13").remove();
+    $("#ta14").remove();
+    $("#ta15").remove();
+    $("#ta16").remove();
+    $("#ta17").remove();
     localStorage.clear()
 })
 
