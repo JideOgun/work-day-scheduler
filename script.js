@@ -61,15 +61,15 @@ $("#ta16").val(localStorage.getItem('description16'))
 $("#ta17").val(localStorage.getItem('description17'))
 
 $('.clearfields').click(function(){
-    $('#ta9').remove();
-    $("#ta10").remove();
-    $("#ta11").remove();
-    $("#ta12").remove();
-    $("#ta13").remove();
-    $("#ta14").remove();
-    $("#ta15").remove();
-    $("#ta16").remove();
-    $("#ta17").remove();
+    $('#ta9').val("");
+    $("#ta10").val("");
+    $("#ta11").val("");
+    $("#ta12").val("");
+    $("#ta13").val("");
+    $("#ta14").val("");
+    $("#ta15").val("");
+    $("#ta16").val("");
+    $("#ta17").val("");
     localStorage.clear()
 })
 
