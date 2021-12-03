@@ -11,22 +11,23 @@ const time = moment().format('LLL');
 //  //grab each hour 
 //  $(".hour").each(function(){ })
    
-     
+  
    for(var i = 9; i < 18; i++) {
        var timediv = document.getElementById('hour-' + i);
        console.log(timediv)
        if(currentHour > i ){
     console.log('it worked and current time is greater than timeblock time');
-     $('.timeblock').addClass('past')
+    $('.timeblock').removeClass('future');
+     $('.timeblock').addClass('past');
  }
-     else if (currentHour === i){
- $('.timeblock').addClass('present');
- console.log('it worked and current time is equal to timeblock time');
+     else if (currentHour < i){
+        $('.timeblock').addClass('future');
+        console.log('it worked and current time is less than timeblock time');
 }
-    else if (currentHour < i){
-    $('.timeblock').addClass('future');
-    console.log('it worked and current time is less than timeblock time');
-                }
+    else {
+        $('.timeblock').addClass('present');
+ console.log('it worked and current time is equal to timeblock time')
+   }
    } 
     
 
